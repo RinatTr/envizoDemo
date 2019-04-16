@@ -2,9 +2,9 @@
 <meta charset="utf-8">
 <style>
 body {cursor: url('./iconfinder_Scuba.png'), auto;
-      background:url('https://trello-attachments.s3.amazonaws.com/5ca1ffec97ca8169c9c3b9a3/5cae44fe7f61c73d8ffa1465/5fbe74feb529d251f026c0467e130639/5_borough.jpg');
+      background:url('https://upload.wikimedia.org/wikipedia/commons/1/1a/NYC_Mayoral_Election_1977_Results_by_Borough.svg');
       background-repeat: no-repeat, repeat;
-      background-size: 960px;
+      background-size: 100vh;
       background-color: rgba(255, 255, 255, 0.15);
       background-blend-mode: lighten;
     }
@@ -228,7 +228,7 @@ var svg = d3.select('#content').append("svg")
 
 //here not quite sure, but i think the shape of a circle is selected to be added to all the svg tags that were created
 //or it could be that the name of circle is added to the svg tag so then it can be selected and appended to...???
-// #DE2F32 , bronx: #00ABD8, queens: #FDD54A, brooklyn: #008E7F, staten: #F15D8A
+// #3B8CDD , bronx: #84B9EE, queens: #ADE9B6, brooklyn: #B9D9FC, staten: #29CB58
 
 let color = ['#DE2F32','#00ABD8','#FDD54A','#008E7F','#F15D8A']
 svg.selectAll("circle")
@@ -238,19 +238,19 @@ svg.selectAll("circle")
     .style("fill", (d)=> {
     switch(d.borough){
       case 'bronx':
-        return color[1]
+        return '#84B9EE'
         break;
       case 'queens':
-        return color[2]
+        return '#ADE9B6'
         break;
       case 'brooklyn':
-        return color[3]
+        return '#B9D9FC'
         break;
       case 'manhattan':
-        return color[0]
+        return '#3B8CDD'
         break;
       default:
-        return color[4]}} )
+        return '#29CB58'}} )
     .style({stroke:'#969b01'})
     .style("stroke-width", 3)
 
